@@ -1,127 +1,74 @@
 {
-    "endpoint": "https://raw.githubusercontent.com/neost2/YEA-Farms/main/api/v1/api-data.json",
-    "method": "GET",
     "response": {
         "about": {
             "farm_info": {
                 "name": "YEA Farm",
-                "established": 2024,
+                "description": "A family-owned farm dedicated to sustainable agriculture and community engagement",
+                "mission_statement": "To provide quality farm products while educating and inspiring our community",
                 "location": {
-                    "address": "1024 Farm Road",
                     "city": "Elgin",
-                    "state": "AZ",
-                    "zip": "60120"
-                },
-                "description": "Fullfilling a Life long dream. Living the life of a farmer ",
-                "mission_statement": "To promote livestock for 4-H and FFA shows"
+                    "state": "AZ"
+                }
             }
         },
         "history": {
             "milestones": [
                 {
-                    "year": 2024,
-                    "event": "Farm founded"
+                    "year": 2020,
+                    "event": "Farm established"
                 },
                 {
-                    "year": 2024,
-                    "event": "Achieved USDA certification"
+                    "year": 2021,
+                    "event": "First community workshop"
                 },
                 {
-                    "year": 2010,
-                    "event": "grand champ win"
+                    "year": 2022,
+                    "event": "Expanded livestock program"
                 }
             ]
         },
-        "team": {
-            "team_members": [
+        "livestock": {
+            "animals": [
                 {
-                    "id": "001",
-                    "name": "Eugene Neustadter",
-                    "role": "Farm Owner",
-                    "bio": "15 years of sustainable farming experience",
-                    "image": "/images/putimagenamehere",
-                    "expertise": [
-                        "what ever info"
-                    ],
-                    "contact": {
-                        "email": "email",
-                        "phone": "520"
-                    }
-                },
-                {
-                    "id": "002",
-                    "name": "Yana Carter",
-                    "role": "Breeder",
-                    "bio": "Expert in sustainable animal raising and breeding",
-                    "image": "/images/image",
-                    "expertise": [
-                        "what ever info"
-                    ],
-                    "contact": {
-                        "email": "yana@yeafarm.com",
-                        "phone": "something"
-                    }
+                    "id": "l001",
+                    "name": "Sample Animal",
+                    "breed": "Sample Breed",
+                    "ear_notch": "14-2",
+                    "dob": "2024-06-15",
+                    "gender": "Gilt",
+                    "dam_and_sire": "Dam: ABC123, Sire: XYZ789"
                 }
             ]
         },
-      "inventory": {
-            "for_sale": {
-                "pigs": [
-                    {
-                        "name": "Pig 1",
-                        "price": 400,
-                        "image_url": "/images/imagename.jpg",
-                        "breed": "breed",
-                        "ear notch": "14-2",
-                        "DOB": "Summer",
-                        "gender": "Gilt or Barrow"
-                    }
-                ]
-            },
-            "recent_sales": {
-                "pigs": [
-                    {
-                        "name": "Pig 1",
-                        "price": 400,
-                        "image_url": "/images/imagename.jpg",
-                        "breed": "breed",
-                        "ear notch": "14-2",
-                        "DOB": "Summer",
-                        "gender": "Gilt or Barrow",
-                        "dam and sire": "what this info is"
-                    }
-                ]
-            },
-            "events": {
-                "upcoming_events": [
-                    {
-                        "id": "e001",
-                        "title": "Farm to Table Workshop",
-                        "date": "2024-12-15",
-                        "time": "10:00 AM",
-                        "description": "cali show need info still",
-                        "capacity": 20,
-                        "registered": 15,
-                        "price": 25.00,
-                        "location": "Farm"
-                    },
-                    {
-                        "id": "e002",
-                        "title": "Community Harvest Day",
-                        "date": "2024-12-20",
-                        "time": "9:00 AM",
-                        "description": "need info",
-                        "capacity": 50,
-                        "registered": 30,
-                        "price": 0.00,
-                        "location": "need info"
-                    }
-                ]
-            }
-        },
-        "error_responses": {
-            "404": "Data not found",
-            "500": "Internal server error"
+        "events": {
+            "upcoming_events": [
+                {
+                    "id": "e001",
+                    "title": "Farm to Table Workshop",
+                    "date": "2024-12-15",
+                    "time": "10:00 AM",
+                    "description": "Learn about sustainable farming practices and enjoy farm-fresh meals",
+                    "capacity": 20,
+                    "registered": 15,
+                    "price": 25.00,
+                    "location": "YEA Farms Main Building"
+                },
+                {
+                    "id": "e002",
+                    "title": "Community Harvest Day",
+                    "date": "2024-12-20",
+                    "time": "9:00 AM",
+                    "description": "Join us for a community harvest celebration",
+                    "capacity": 50,
+                    "registered": 30,
+                    "price": 0.00,
+                    "location": "YEA Farms Fields"
+                }
+            ]
         }
+    },
+    "error_responses": {
+        "404": "Data not found",
+        "500": "Internal server error"
     }
 }
