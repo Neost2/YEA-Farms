@@ -1,31 +1,48 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About YEA Farm</title>
-    
+    <title>About Page</title>
+    <link rel="stylesheet" href="/public/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav id="main-nav"></nav>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h1>About YEA Farm</h1>
-            <div id="mission-statement"></div>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Your Logo</a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html" class="active">About</a></li>
+                <li><a href="/Sale.html">Sales</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>About Us</h1>
+        <div id="mission-statement"></div>
+    </div>
+
+    <div class="about-content">
+        <section id="farm-description">
+            
         </section>
 
-        <section class="about-content">
-            <div id="farm-description"></div>
-            
-            <div class="history-section">
-                <h2>Our History</h2>
-                <div id="milestones"></div>
+        <section class="history-section">
+            <h2>Our History</h2>
+            <div id="milestones">
+               
             </div>
         </section>
-    </main>
+    </div>
 
     <script src="js/about.js"></script>
 </body>
