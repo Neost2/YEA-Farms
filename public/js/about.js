@@ -2,7 +2,7 @@
 class AboutPage {
     constructor() {
         
-        this.apiUrl = 'https://raw.githubusercontent.com/neost2/YEA-Farms/main/api/v1/api-data.json';
+        this.apiUrl = '/api/v1/api-data.json';
         this.init();
     }
 
