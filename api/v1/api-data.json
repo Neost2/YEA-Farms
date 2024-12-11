@@ -1,5 +1,5 @@
 {
-    "endpoint": "https://neost2.github.io/YEA-Farms/api-data.json",
+    "endpoint": "https://raw.githubusercontent.com/neost2/YEA-Farms/main/api/v1/api-data.json",
     "method": "GET",
     "response": {
         "about": {
