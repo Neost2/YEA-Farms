@@ -1,20 +1,49 @@
-# YEA-Farms
-Webpage for YEA Farms pig breading 
+# YEA Farm Website Documentation
 
-Group : Remington Neustadter, Jacob Dye, Gabriel Phipps
+## Overview
 
-What API is about: /YEA-Farms/v1 being madeby Remington almost done
-This api gives all the stats and information on YEA Farm and what is onsite for sale. Along with other pertinent information.
-	https://api.ers.usda.gov/data/
-This appi gives all information about registered Pigs on farm and all the breeder info needed for th page
+This website serves as the online presence for YEA Farm, featuring information about our agricultural operations, products, and services.
 
+## Features
 
-Who is working on what page:
+- Responsive navigation with mobile-friendly menu
+- Dynamic content loading from API
+- About page with farm history and milestones
+- Sales section for farm products
 
-Homepage - Remington, Jacob, Gabe
+## Technical Stack
 
-Contact page - Gabe
+The website is built using:
 
-For Sale/competition calender - Jacob
+- HTML5
+- CSS3 with responsive design
+- Vanilla JavaScript (ES6+)
+- Font Awesome for icons
 
-About - Remington
+## Setup Instructions
+
+1. Clone the repository to your local machine
+2. Ensure you have a local server running on port 3000
+3. Place your API data in public/api/v1/api-data.json
+4. Open index.html in your web browser
+
+## Browser Compatibility
+
+The website is compatible with:
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Submit a pull request
+
+## Contact
+
+For any questions or concerns, please contact the development team.
