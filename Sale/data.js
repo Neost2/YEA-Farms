@@ -35,7 +35,7 @@
 //fetchData();
 //});
 
-class AboutPage {
+class SalePage {
     constructor() {
         
         this.apiUrl = 'http://localhost:3000/public/api/v1/api-data.json';
