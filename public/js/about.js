@@ -1,8 +1,57 @@
-// about.js
+
+const API_URL = '/public/api/v1/api-data.json';
+
+class LoremIpsumGenerator {
+    constructor() {
+        this.apiUrl = 'https://loripsum.net/api';
+        this.init();
+    }
+
+    async init() {
+        try {
+            const loremText = await this.fetchLorem();
+            this.renderContent(loremText);
+        } catch (error) {
+            console.error('Error fetching lorem ipsum:', error);
+            this.handleError(error);
+        }
+    }
+
+    async fetchLorem() {
+        try {
+            const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+            const response = await fetch(`${corsProxy}${this.apiUrl}/3/medium/headers/decorate`);
+            
+            if (!response.ok) {
+                throw new Error(`Lorem API error: ${response.status}`);
+            }
+            
+            return await response.text();
+        } catch (error) {
+            throw new Error(`Failed to fetch lorem ipsum: ${error.message}`);
+        }
+    }
+
+    renderContent(text) {
+        const contentElement = document.getElementById('lorem-content');
+        if (!contentElement) {
+            console.error('Lorem content element not found');
+            return;
+        }
+        contentElement.innerHTML = text;
+    }
+
+    handleError(error) {
+        const contentElement = document.getElementById('lorem-content');
+        if (contentElement) {
+            contentElement.innerHTML = `<div class="error">Error loading content: ${error.message}</div>`;
+        }
+    }
+}
+
 class AboutPage {
     constructor() {
-        
-        this.apiUrl = 'http://localhost:3000/public/api/v1/api-data.json';
+        this.apiUrl = API_URL;
         this.init();
     }
 
@@ -18,18 +67,10 @@ class AboutPage {
 
     async fetchData() {
         try {
-            const response = await fetch(this.apiUrl, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            });
-
+            const response = await fetch(this.apiUrl);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-
             return await response.json();
         } catch (error) {
             throw new Error(`Failed to fetch data: ${error.message}`);
@@ -38,7 +79,7 @@ class AboutPage {
 
     renderContent(data) {
         if (!data || !data.response) {
-            throw new Error('Invalid data format received');
+            throw new Error('Invalid data format');
         }
 
         this.renderMissionStatement(data.response.about.farm_info);
@@ -98,7 +139,8 @@ class AboutPage {
     }
 }
 
-// Initialize the about page when DOM is fully loaded
+// Initialize both classes when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new AboutPage();
+    new LoremIpsumGenerator();
 });
