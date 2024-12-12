@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEA Farm</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><img src="/assets/images/Logo.jpg" alt="Logo"></a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/public/index.html" class="active">Home</a></li>
+                <li><a href="/public/about.html">About</a></li>
+                <li><a href="/Sale/Sale.html">Sales</a></li>
+                <li><a href="/contact/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to YEA Farm</h1>
+                <p>Family-operated heritage breed pig farm in Elgin, Arizona</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>What We Offer</h2>
+                <div class="feature-grid" id="feature-container"></div>
+            </div>
+        </section>
+
+        <section id="weather-section">
+            <div class="container">
+                <h2>Local Weather</h2>
+                <div id="weather-map"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 YEA Farm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/public/js/index.js"></script>
+    <script src="/sale/weather.js"></script>
+</body>
+</html>
