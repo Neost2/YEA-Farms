@@ -58,7 +58,7 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+    padding: calc(var(--spacing-unit) /2) var(--spacing-unit);
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
