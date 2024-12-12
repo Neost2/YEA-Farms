@@ -4,7 +4,7 @@
     --secondary-color: #34495e;
     --accent-color: #3498db;
     --text-color: #333;
-    --light-bg: #f5f6fa;
+    --light-bg: #effaf9;
     --spacing-unit: 1rem;
 }
 
@@ -77,3 +77,19 @@ nav {
     padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
     text-align: center;
 }
+
+
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    padding: 1px;
+}
+
+.carousel-control-prev {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    padding: 1px;
+}
+
+
+
