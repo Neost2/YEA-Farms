@@ -1,8 +1,78 @@
+const API_URL = './assets/api/v1/api-data.json';
+
+class ContactPage {
+    constructor() {
+        this.apiUrl = API_URL;
+        this.init();
+    }
+
+    async init() {
+        try {
+            const data = await this.fetchData();
+            this.renderContent(data);
+        } catch (error) {
+            console.error('Error initializing contact page:', error);
+            this.handleError(error);
+        }
+    }
+
+    async fetchData() {
+        try {
+            const response = await fetch(this.apiUrl);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return await response.json();
+        } catch (error) {
+            throw new Error(`Failed to fetch data: ${error.message}`);
+        }
+    }
+
+    renderContent(data) {
+        if (!data || !data.response) {
+            throw new Error('Invalid data format');
+        }
+
+        this.renderTeamMembers(data.response.team.team_members);
+    }
+
+    renderTeamMembers(teamMembers) {
+        const teamContainer = document.getElementById('teamContainer');
+        if (teamContainer && Array.isArray(teamMembers)) {
+            teamContainer.innerHTML = teamMembers.map(member => `
+                <div class="team-member">
+                    <h3>${this.sanitizeHTML(member.name)}</h3>
+                    <p><strong>Role:</strong> ${this.sanitizeHTML(member.role)}</p>
+                    <p><strong>Bio:</strong> ${this.sanitizeHTML(member.bio)}</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> ${this.sanitizeHTML(member.contact.email)}</p>
+                        <p><strong>Phone:</strong> ${this.sanitizeHTML(member.contact.phone)}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
+
+    sanitizeHTML(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    handleError(error) {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = `An error occurred: ${error.message}`;
+        document.body.prepend(errorDiv);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
+    new ContactPage();
     try {
-        const PREMIS_ID = '00rhtbht';
-        const API_KEY = 'DVQf4JD7KYgkcub0aPmsahIikjbjGBvGPIbB54Ho';
-        const USDA_API_URL = `https://api.ers.usda.gov/premises/${PREMIS_ID}`;
+        const STATE_CODE = 'AZ'; 
+        const PREMIS_ID = '00rhtbht'; 
+        const API_URL = `https://aphis-usda.api.gov/premises/v1/${STATE_CODE}/${PREMIS_ID}`;
 
         const usdaResponse = await fetch(USDA_API_URL, {
             headers: {
@@ -26,31 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <p><strong>Address:</strong> ${usdaData.address}</p>
         `;
 
-        const response = await fetch('./assets/api/v1/api-data.json');
-        const data = await response.json();
         
-        
-        document.getElementById('farmName').textContent = data.response.about.farm_info.name;
-        document.getElementById('farmDescription').textContent = data.response.about.farm_info.description;
-        document.getElementById('location').textContent = 
-            `${data.response.about.farm_info.location.city}, ${data.response.about.farm_info.location.state}`;
-
-        
-        const teamContainer = document.getElementById('teamContainer');
-        data.response.team.team_members.forEach(member => {
-            const memberElement = document.createElement('div');
-            memberElement.className = 'team-member';
-            memberElement.innerHTML = `
-                <h3>${member.name}</h3>
-                <p><strong>Role:</strong> ${member.role}</p>
-                <p><strong>Bio:</strong> ${member.bio}</p>
-                <div class="contact-details">
-                    <p><strong>Email:</strong> ${member.contact.email}</p>
-                    <p><strong>Phone:</strong> ${member.contact.phone}</p>
-                </div>
-            `;
-            teamContainer.appendChild(memberElement);
-        });
 
     } catch (error) {
         console.error('Error:', error);
