@@ -71,12 +71,7 @@ nav {
     background-color: var(--accent-color);
 }
 
-/* Hero Section */
-.hero {
-    background-color: var(--light-bg);
-    padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
-    text-align: center;
-}
+
 
 
 .carousel-control-next {
