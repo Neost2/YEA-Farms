@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
-    <link rel="stylesheet" href="contact/contact.css">
+    <title>YEA Farm Contact</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+</head>
 <body>
     <nav>
         <div class="nav-container">
-            <a href="/" class="nav-logo">Your Logo</a>
-
-            <button class="mobile-menu-btn">
+            <a href="/" class="nav-logo"><img src="/assets/images/Logo.jpg" alt="Logo"></a>
+            <!-- <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
-            </button>
-
+            </button> -->
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html" class="active">About</a></li>
-                <li><a href="/Sale/Sale.html">Competetion</a></li>
-
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/assets/html/about.html">About</a></li>
+                <li><a href="/Sale/Sale.html">Competition</a></li>
+                <li><a href="/contact/contact.html" class="active">Contact Us</a></li>
             </ul>
         </div>
     </nav>
+    <div class="farm-info">
+        <h1 id="farmName"></h1>
 
+        <div class="contact-info">
+            <h2>Location</h2>
+            <p id="location"></p>
+        </div>
+        <div class="usda-info">
+            <h2>USDA Information</h2>
+            <div id="usdaData"></div>
+        </div>
+    </div>
 
-    <title> Contact </title>
-    </head>
-
-    <body>
-        <h2>Name: </h2>
-        <h2>Phone: </h2>
-        <h2>Email: </h2>
-        <h2>Facebook: </h2>
-        <h2>Address: </h2>
-        <label>
-            <input type="checkbox" name="subscribe" value="yes">
-            Subscribe to newsletter
-        </label>
-        <button type="submit">Send</button>
-        <li><a href="https://www.facebook.com/yea.farm.2024"></a></li>
-    </body>
+    <h2>Our Team</h2>
+    <div class="team-grid" id="teamContainer"></div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 YEA Farm. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/contact/contact.js"></script>
+    <label>
+        <input type="checkbox" name="subscribe" value="yes">
+        Subscribe to newsletter
+    </label>
+    <button type="submit">Send</button>
+    <li><a href="https://www.facebook.com/yea.farm.2024"></a></li>
+</body>
+</html>
+    
+    
