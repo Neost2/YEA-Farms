@@ -99,7 +99,7 @@
 // }
 
 // script.js
-const apiKey = 'Y40e589ff13fdbe17bb79ac28e1743f59'; // Replace with your OpenWeatherMap API key
+const apiKey = '40e589ff13fdbe17bb79ac28e1743f59'; // Replace with your OpenWeatherMap API key
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Elgin,AZ,US&units=imperial&appid=${apiKey}`;
 
 fetch(apiUrl)
