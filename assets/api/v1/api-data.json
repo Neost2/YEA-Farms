@@ -63,27 +63,27 @@
             "for_sale": {
                 "pigs": [
                     {
-                        "name": "Pig 1",
-                        "price": 400,
-                        "image_url": "/images/imagename.jpg",
-                        "breed": "breed",
+                        "name": "Tether",
+                        "price": 1400,
+                        "image_url": "./assets/images/ShowPic.jpeg",
+                        "breed": "Cross",
                         "ear notch": "14-2",
-                        "DOB": "Summer",
-                        "gender": "Gilt or Barrow"
+                        "DOB": "04/03/24",
+                        "gender": "Barrow"
                     }
                 ]
             },
             "recent_sales": {
                 "pigs": [
                     {
-                        "name": "Pig 1",
+                        "name": "Tough",
                         "price": 400,
-                        "image_url": "/images/imagename.jpg",
-                        "breed": "breed",
-                        "ear notch": "14-2",
-                        "DOB": "Summer",
-                        "gender": "Gilt or Barrow",
-                        "dam and sire": "what this info is"
+                        "image_url": "./assets/images/NiecewithPig.jpeg",
+                        "breed": "Dark Cross",
+                        "ear notch": "10-2",
+                        "DOB": "12/17/23",
+                        "gender": "Gilt",
+                        "dam and sire": "Doc Holiday X Sandra Piglet"
                     }
                 ]
             },

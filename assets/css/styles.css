@@ -28,7 +28,7 @@ body {
 /* Container */
 .container {
     max-width: var(--max-width);
-    margin: 0 auto;
+    margin: flex;
     padding: 0 calc(var(--spacing-unit) * 1.5);
 }
 
