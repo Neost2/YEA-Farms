@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <p><strong>Address:</strong> ${usdaData.address}</p>
         `;
 
-        const response = await fetch('/assets/api/v1/api-data.json');
+        const response = await fetch('./assets/api/v1/api-data.json');
         const data = await response.json();
         
         
