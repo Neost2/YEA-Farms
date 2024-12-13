@@ -1,5 +1,5 @@
 
-const API_URL = '/api-data.json';
+const API_URL = '/assets/api/v1/api-data.json';
 
 class LoremIpsumGenerator {
     constructor() {
