@@ -17,25 +17,6 @@ A responsive website for YEA Farm, a family-operated heritage breed pig farm loc
 - Font Awesome 5.15.4
 - jQuery 3.5.1
 
-## Project Structure
-
-```
-/
-├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── index.js
-│   ├── html/
-│   │   └── about.html
-│   └── images/
-├── Sale/
-│   └── Sale.html
-├── contact/
-│   └── contact.html
-└── index.html
-```
-
 ## Setup Instructions
 
 1. Clone the repository to your local machine
